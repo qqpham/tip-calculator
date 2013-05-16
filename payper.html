@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<ul class="clearfix">
+				<li><a href="equal.html" class="mode">Group Equal Split</a></li>
+				<li><a href="index.html" class="mode">Individual</a></li>
+				<li><a href="payper.html" class="mode">Group Pay Your Own</a></li>
+			</ul>
+		</nav>
+	</header>
+	<div class="screen">
+		<section class="input container clearfix">
+			<div class="profile clearfix">
+				<a href="#">
+					<img src="#" alt="person icon" width="30" height="30">
+				</a>
+				<input type="text" name="name" id="name" value="Person A" />
+			</div>
+			<div class="added-value subtotal input-text clearfix">
+				<input type="text" name="item-value" id="item-value" />
+				<button type="button" id="add">+</button>
+			</div>
+			<div class="tax input-text clearfix">
+				<label for="individual-tax">Tax</label>
+				<input type="text" name="individual-tax" id="individual-tax" placeholder="%" />
+			</div>
+			<div class="tip input-button-set clearfix">
+				<button>10%</button>
+				<button>15%</button>
+				<button>20%</button>
+			</div>
+		</section>
+		<section class="output clearfix">
+			<div class="output-subtotal clearfix">
+				<div class="output-label">Subtotal</div>
+				<div class="result">$0</div>
+			</div>
+			<div class="output-tax clearfix">
+				<div class="output-label">Tax</div>
+				<div class="result">$0</div>
+			</div>
+			<div class="output-tip clearfix">
+				<div class="output-label">Tip</div>
+				<div class="result">$0</div>
+			</div>
+			<div class="total clearfix">
+				<div class="output-label">Total</div>
+				<div class="result">$0</div>
+			</div>
+		</section>
+	</div>
+
+    <script src="assets/js/jquery-1.9.1.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

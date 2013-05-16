@@ -1,0 +1,361 @@
+/*****************************************************************************
+Resets
+*****************************************************************************/
+
+/*
+Copyright (c) 2011, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.9.0
+*/
+/**
+ * YUI Reset
+ * @module reset
+ * @namespace
+ * @requires 
+ */
+html {
+	color: #000;
+}
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, button, textarea, select, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+fieldset,
+img {
+	border: 0;
+}
+
+address, button, caption, cite, code, dfn, em, input,
+optgroup, option, select, strong, textarea, th, var {
+    font:inherit;
+}
+
+del, ins {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+caption, th {
+	text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+q:before, q:after {
+	content: '';
+}
+
+abbr, acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+sup {
+	vertical-align: baseline;
+}
+
+sub {
+	vertical-align: baseline;
+}
+
+/*because legend doesn't inherit in IE */
+legend {
+	color: #000;
+}
+
+/*****************************************************************************
+Typography
+*****************************************************************************/
+body {
+	font: 24px 'Helvetica Neue', Arial, sans-serif;
+}
+label {
+	font-size: 18px;
+	font-weight: 200;
+}
+* {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+/*****************************************************************************
+Main
+*****************************************************************************/
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+body {
+	height: 568px;
+	width: 320px;
+	border: 1px solid #000;
+/*	margin: 100px auto;*/
+	background-color: #51d8a0;
+}
+.screen {
+	background-color: #f8f8f8;
+}
+.container {
+	margin: 10px;
+}
+h1 {
+	color: #51d8a0;
+	font-weight: 500;
+	text-align: center;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+}
+button {
+		background-color: #f8f8f8;
+}
+/*****************************************************************************
+Header
+*****************************************************************************/
+header {
+	background: #f8f8f8;
+}
+nav ul {
+	margin-left: 40px;
+	padding: 7px 0;
+}
+nav ul li {
+	float: left;
+	height: 70px;
+	width: 70px;
+	border-radius: 35px;
+	margin-left: 10px;
+	background: white;
+}
+nav ul li a {
+	background: no-repeat center 18px #f8f8f8;
+	display: block;
+	text-indent: -9999px;
+	height: 54px;
+	width: 54px;
+	border-radius: 27px;
+	margin: 8px auto;
+}
+.mode-single a {
+	background-image: url(../im/icon-single.gif);
+}
+.mode-equal a {
+	background-image: url(../im/icon-equal.gif);
+}
+.mode-unequal a {
+	background-image: url(../im/icon-unequal.gif);
+}
+li.on a,
+nav li a:active {
+	background-position: center -19px;
+	background-color: #f8f8f8;
+}
+li.on {
+	background: #51d8a0;
+}
+
+/*****************************************************************************
+Input
+*****************************************************************************/
+.input {
+}
+label {
+	float: left;
+	margin-top: 3px;
+	color: #bbb;
+}
+input {
+	border: none;
+	float: right;
+	text-align: right;
+	width: 200px;
+}
+input:focus {
+	outline: none;
+}
+.input-text {
+	padding: 10px;
+	color: #aaa;
+}
+.subtotal {
+	border: 1px solid #e5e5e5;
+	border-radius: 5px 5px 0 0;
+	background-color: #fefefe;
+/*	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);*/
+	
+}
+.tax {
+	border: 1px solid #e5e5e5;
+	border-top: none;
+	border-radius: 0 0 5px 5px;
+	background-color: #fefefe;
+	box-shadow: 0 2px 0 rgba(255, 255, 255, 1);
+/*	box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);*/
+	
+}
+.tip li{
+	float: left;
+	margin: 20px 0 10px 0;
+	height: 100px;
+	width: 100px;
+	box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.12);
+	background-color: #fff;
+	border-radius: 50px;	
+}
+.tip button {
+	margin: 8px;
+	border: none;
+	float: left;
+	width: 84px;
+	height: 84px;
+	border-radius: 43px;
+	font-weight: bold;
+	color: #aaa;
+	font-size: 30px;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
+	border: 1px solid white;
+	cursor: pointer;
+}
+.tip li.on {
+	background-color: #51d8a0;
+}
+.tip li.on button {
+	color: #51d8a0;
+}
+.tip button span {
+	font-size: 16px;
+	padding-left: 2px;
+}
+
+/*****************************************************************************
+Output
+*****************************************************************************/
+.output {
+	background: #51d8a0;
+	padding: 10px;
+/*	border-top: 2px solid #fff;*/
+	border-top: 1px solid #e5e5e5;
+	box-shadow: inset 0 2px 0 rgba(255, 255, 255, 1);
+	color: #fff;
+	box-shadow: ;
+	
+}
+.result {
+	float: right;
+	margin-right: 10px;
+	font-weight: bold;
+}
+.output-label {
+	float: left;
+	font-size: 24px;
+	font-weight: 200;
+	margin-left: 10px;
+}
+.output > div {
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+
+}
+.total {
+	padding-top: 10px;	
+}
+.total div {
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/*****************************************************************************
+Calculate
+*****************************************************************************/
+#calculate {
+	margin: 10px;
+	border: 1px solid #555;
+	border-radius: 4px;
+	padding: 10px 5px;
+	width: 300px;
+}
+/*****************************************************************************
+Equal Split
+*****************************************************************************/
+.people-number label {
+	width: 100px;
+	margin-left: 10px;
+}
+.people-number input {
+	border: 1px solid #555;
+	border-radius: 4px;
+	padding: 10px;
+	width: 130px;
+}
+.people-number {
+	padding: 0;
+}
+.total .output-label {
+	width: 100px;
+}
+/*****************************************************************************
+Pay Your Own
+*****************************************************************************/
+.profile {
+	margin-bottom: 10px;
+}
+.profile img {
+	background: #ccc;
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+	float: left;
+}
+.profile input {
+	float: left;
+	text-align: left;
+	margin-left: 10px;
+}
+.added-value button {
+	border: 1px solid #555;
+	height: 30px;
+	width: 30px;
+	border-radius: 15px;
+	float: right;
+}
+.added-value input {
+	float: left;
+	width: 230px;
+	text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
