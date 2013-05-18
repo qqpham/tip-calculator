@@ -1,62 +1,108 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
-    <title>Tip Calculator</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
-<body>
-	<header>
-		<nav>
-			<ul class="clearfix">
-				<li><a href="equal.html" class="mode">Group Equal Split</a></li>
-				<li><a href="index.html" class="mode">Individual</a></li>
-				<li><a href="payper.html" class="mode">Group Pay Your Own</a></li>
-			</ul>
-		</nav>
-	</header>
-	<div class="screen">
-		<section class="input container clearfix">
-			<div class="people-number input-text clearfix">
-				<label for="group-people">Number of People</label>
-				<input type="text" name="group-people" id="group-people" placeholder="0" />
-			</div>
-			<div class="subtotal input-text clearfix">
-				<label for="individual-subtotal">Subtotal</label>
-				<input type="text" name="individual-subtotal" id="individual-subtotal" placeholder="$0" />
-			</div>
-			<div class="tax input-text clearfix">
-				<label for="individual-tax">Tax</label>
-				<input type="text" name="individual-tax" id="individual-tax" placeholder="$0" />
-			</div>
-			<div class="tip input-button-set clearfix">
-				<button>10%</button>
-				<button>15%</button>
-				<button>20%</button>
-			</div>
-		</section>
-		<section class="output clearfix">
-			<div class="output-subtotal clearfix">
-				<div class="output-label">Subtotal</div>
-				<div class="result">$0</div>
-			</div>
-			<div class="output-tax clearfix">
-				<div class="output-label">Tax</div>
-				<div class="result">$0</div>
-			</div>
-			<div class="output-tip clearfix">
-				<div class="output-label">Tip</div>
-				<div class="result">$0</div>
-			</div>
-			<div class="total clearfix">
-				<div class="output-label">Total Per Person</div>
-				<div class="result">$0</div>
-			</div>
-		</section>
-	</div>
+<!--
+	Licensed to the Apache Software Foundation (ASF) under one
+	or more contributor license agreements.  See the NOTICE file
+	distributed with this work for additional information
+	regarding copyright ownership.  The ASF licenses this file
+	to you under the Apache License, Version 2.0 (the
+	"License"); you may not use this file except in compliance
+	with the License.  You may obtain a copy of the License at
 
-    <script src="assets/js/jquery-1.9.1.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
-</body>
+	http://www.apache.org/licenses/LICENSE-2.0
+
+	Unless required by applicable law or agreed to in writing,
+	software distributed under the License is distributed on an
+	"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+	 KIND, either express or implied.  See the License for the
+	specific language governing permissions and limitations
+	under the License.
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<title>Tip Calculator</title>
+	</head>
+	<body>
+
+
+		<header>
+			<nav class="modes">
+				<ul class="clearfix button-set">
+					<li class="mode-equal on"><a href="equal.html">Group Equal Split</a></li>
+					<li class="mode-single"><a href="index.html">Individual</a></li>
+					<li class="mode-unequal"><a href="unequal.html">Group Unequal</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div class="screen">
+			<h1>Equal Split</h1>
+			<section class="input container clearfix">
+				<div class="people-number input-text clearfix">
+					<label for="group-people">No. People</label>
+					<input type="text" name="group-people" id="group-people" placeholder="0" />
+				</div>
+				<div class="subtotal input-text clearfix">
+					<label for="individual-subtotal">Subtotal</label>
+					<input type="number" name="individual-subtotal" id="individual-subtotal" placeholder="$0" />
+				</div>
+				<div class="tax input-text clearfix">
+					<label for="individual-tax">Tax</label>
+					<input type="number" name="individual-tax" id="individual-tax" placeholder="$0" />
+				</div>
+				<div class="tip clearfix">
+					<ul class="clearfix button-set">
+						<li>
+							<button><strong>10</strong><span>%</span></button>
+						</li>
+						<li class="on">
+							<button><strong>15</strong><span>%</span></button>
+						</li>
+						<li>
+							<button class="twenty-percent"><strong>20</strong><span>%</span></button>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="output clearfix">
+				<!-- <div class="output-subtotal clearfix">
+									<div class="output-label">Subtotal</div>
+									<div class="result">$0</div>
+								</div>
+								<div class="output-tax clearfix">
+									<div class="output-label">Tax</div>
+									<div class="result">$0</div>
+								</div> -->
+				<div class="output-tip clearfix">
+					<div class="output-label">Tip</div>
+					<div class="result">$0</div>
+				</div>
+				<div class="total clearfix">
+					<div class="output-label">Total</div>
+					<div class="result">$0</div>
+				</div>
+			</section>
+		</div>
+
+		<script type="text/javascript" src="cordova-2.7.0.js"></script>
+		<script type="text/javascript" charset="utf-8">
+
+		// Wait for Cordova to load
+		//
+		document.addEventListener("deviceready", onDeviceReady, false);
+
+		// Cordova is ready
+		//
+		function onDeviceReady() {
+		    navigator.splashscreen.hide();
+		}
+
+		</script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/scripts.js"></script>
+
+
+	</body>
 </html>
