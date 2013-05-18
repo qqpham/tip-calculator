@@ -112,7 +112,7 @@ body {
     width: 320px;
     border: 1px solid #000;
 /*  margin: 100px auto;*/
-    background-color: #51d8a0;
+    background-color: #00e89e;
 }
 .screen {
     background-color: #f8f8f8;
@@ -121,10 +121,10 @@ body {
     margin: 10px;
 }
 h1 {
-    color: #51d8a0;
-    font-weight: 500;
+    color: #00e39b;
+    font-weight: bold;
     text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 }
 button {
         background-color: #f8f8f8;
@@ -136,16 +136,18 @@ header {
     background: #f8f8f8;
 }
 nav ul {
-    margin-left: 40px;
-    padding: 7px 0;
+    margin-left: 30px;
+    padding: 10px 0 8px 0;
 }
 nav ul li {
     float: left;
     height: 70px;
     width: 70px;
     border-radius: 35px;
-    margin-left: 10px;
+    margin-left: 15px;
     background: white;
+	box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
+    
 }
 nav ul li a {
     background: no-repeat center 18px #f8f8f8;
@@ -155,6 +157,8 @@ nav ul li a {
     width: 54px;
     border-radius: 27px;
     margin: 8px auto;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
 }
 .mode-single a {
     background-image: url(../im/icon-single.gif);
@@ -171,87 +175,96 @@ nav li a:active {
     background-color: #f8f8f8;
 }
 li.on {
-    background: #51d8a0;
+    background: #00e89e;
 }
 
 /*****************************************************************************
 Input
 *****************************************************************************/
-.input {
-}
 label {
     float: left;
     margin-top: 3px;
-    color: #bbb;
+    color: #aaa;
 }
 input {
     border: none;
     float: right;
     text-align: right;
     width: 200px;
+	color: #aaa;
+}
+.input-text {
+	padding: 10px;
 }
 input:focus {
     outline: none;
-}
-.input-text {
-    padding: 10px;
-    color: #aaa;
 }
 .subtotal {
     border: 1px solid #e5e5e5;
     border-radius: 5px 5px 0 0;
     background-color: #fefefe;
+    border-bottom: none;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.2);
 /*  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);*/
-    
 }
 .tax {
     border: 1px solid #e5e5e5;
-    border-top: none;
     border-radius: 0 0 5px 5px;
     background-color: #fefefe;
-    box-shadow: 0 2px 0 rgba(255, 255, 255, 1);
-/*  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.05);*/
-    
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 1),
+				inset 0 1px 1px rgba(0, 0, 0, 0.2);    
 }
 .tip li{
     float: left;
-    margin: 20px 0 10px 0;
-    height: 100px;
-    width: 100px;
-    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.12);
+	margin: 20px 15px 10px 0;
+    height: 90px;
+    width: 90px;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
     background-color: #fff;
-    border-radius: 50px;    
+    border-radius: 45px;    
+}
+.tip li:last-child {
+	margin-right: 0;
 }
 .tip button {
     margin: 8px;
     border: none;
     float: left;
-    width: 84px;
-    height: 84px;
-    border-radius: 43px;
+    width: 74px;
+    height: 74px;
+    border-radius: 37px;
     font-weight: bold;
     color: #aaa;
-    font-size: 30px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
-    border: 1px solid white;
+    font-size: 28px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
     cursor: pointer;
+	padding-left: 3px;
+	letter-spacing: -3px;
+}
+.tip .twenty-percent {
+	letter-spacing: 0;
 }
 .tip li.on {
-    background-color: #51d8a0;
+    background-color: #00e89e;
+/*	box-shadow: 0 2px 0 rgba(255, 255, 255, 1);*/
 }
 .tip li.on button {
-    color: #51d8a0;
+    color: #00e39b;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
 }
 .tip button span {
     font-size: 16px;
-    padding-left: 2px;
+    padding-left: 4px;
+}
+.tip .twenty-percent span {
+	margin-left: -3px;
 }
 
 /*****************************************************************************
 Output
 *****************************************************************************/
 .output {
-    background: #51d8a0;
+    background: #00e89e;
     padding: 10px;
 /*  border-top: 2px solid #fff;*/
     border-top: 1px solid #e5e5e5;
@@ -276,66 +289,85 @@ Output
 
 }
 .total {
-    padding-top: 10px;  
+/*    padding-top: 10px;*/
 }
 .total div {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
-}
-
-/*****************************************************************************
-Calculate
-*****************************************************************************/
-#calculate {
-    margin: 10px;
-    border: 1px solid #555;
-    border-radius: 4px;
-    padding: 10px 5px;
-    width: 300px;
 }
 /*****************************************************************************
 Equal Split
 *****************************************************************************/
+.people-number {
+	margin-bottom: 10px;
+	background-color: #fefefe;
+    border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	box-shadow: 0 2px 0 rgba(255, 255, 255, 1),
+				inset 0 1px 1px rgba(0, 0, 0, 0.2);
+    
+}
 .people-number label {
     width: 100px;
-    margin-left: 10px;
+	float: left;
 }
 .people-number input {
-    border: 1px solid #555;
     border-radius: 4px;
-    padding: 10px;
-    width: 130px;
-}
-.people-number {
-    padding: 0;
+    width: 175px;
+	background-color: #fefefe;
+	float: right;
 }
 .total .output-label {
     width: 100px;
 }
 /*****************************************************************************
-Pay Your Own
+Unequal
 *****************************************************************************/
 .profile {
     margin-bottom: 10px;
 }
 .profile img {
     background: #ccc;
-    height: 30px;
-    width: 30px;
+}
+.person-icon {
+	width: 30px;
+	height: 30px;
+	border: none;
+/*	background-image: url(im/person-icon.png) no-repeat 0 0;*/
+	background-color: #aaa;
     border-radius: 15px;
     float: left;
+	cursor: pointer;
 }
 .profile input {
     float: left;
     text-align: left;
     margin-left: 10px;
+	background-color: #f8f8f8;
+/*	text-decoration: underline;*/
+/*	border-bottom: 1px dashed #aaa;*/
+	border-bottom: 1px solid #e5e5e5;
+	border-radius: 0;
+    box-shadow: 0 2px 0 rgba(255, 255, 255, 1);
+	width: 260px;
+	
 }
 .added-value button {
-    border: 1px solid #555;
     height: 30px;
     width: 30px;
     border-radius: 15px;
     float: right;
+	border: none;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+	color: #aaa;
+	padding-bottom: 3px;
+	cursor: pointer;
+}
+.added-value button:active {
+	background-color: #aaa;
+	color: white;
+	box-shadow: none;
+	box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
 }
 .added-value input {
     float: left;
