@@ -339,18 +339,20 @@ Unequal
     float: left;
 	cursor: pointer;
 }
-.profile input {
-    float: left;
+.profile input[type="text"] {
+	display:block;
+    float: none;
+	clear: both;
     text-align: left;
     margin-left: 10px;
-	background-color: #f8f8f8;
+	background-color: transparent;
 /*	text-decoration: underline;*/
 /*	border-bottom: 1px dashed #aaa;*/
 	border-bottom: 1px solid #e5e5e5;
 	border-radius: 0;
-    box-shadow: 0 2px 0 rgba(255, 255, 255, 1);
+    box-shadow: 2px 2px 2px #333;
 	width: 260px;
-	
+	-webkit-appearance: none;
 }
 .added-value button {
     height: 30px;
