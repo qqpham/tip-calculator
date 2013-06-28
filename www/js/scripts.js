@@ -1,13 +1,15 @@
 /*****************************************************************************
 Calculate Tip
 *****************************************************************************/
-function calculateTip(subtotal, tax, tipPercent) {
+function calculateTip(people, subtotal, tax, tipPercent) {
 	var tip = (subtotal/100)*tipPercent,
-		total = +subtotal + +tax + +tip;
+		total = +subtotal + +tax + +tip,
+		totalIndividual = total/people;
 
 	return {
 		'tip' : tip.toFixed(2),
-		'total' : total.toFixed(2)
+		'total' : total.toFixed(2),
+		'totalIndividual' : totalIndividual.toFixed(2)
 	}
 }
 
@@ -41,12 +43,23 @@ $('input[type="text"]').on('keyup', function() {
 Get Tip
 *****************************************************************************/
 function getTip() {
-	var subtotal = $('#individual-subtotal').val(),
+	var people = $('#group-people').val(),
+		subtotal = $('#individual-subtotal').val(),
 		tax = $('#individual-tax').val(),
 		tipPercent = parseInt($('.tip .on button strong').text());
 
-	$('.output-tip .result').text('$' + calculateTip(subtotal, tax, tipPercent).tip);
-	$('.total .result').text('$' + calculateTip(subtotal, tax, tipPercent).total);
+	if (!people || people < 1) {
+		people = 1;
+	}
+
+	if (subtotal) {
+		$('.output-tip .result').text('$' + calculateTip(people, subtotal, tax, tipPercent).tip);
+		$('.total .result').text('$' + calculateTip(people, subtotal, tax, tipPercent).total);
+		$('.total-individual .result').text('$' + calculateTip(people, subtotal, tax, tipPercent).totalIndividual);
+	} else {
+		// do nothing
+	}
+
 }
 
 $('.tip').on('click', 'button', function(){
