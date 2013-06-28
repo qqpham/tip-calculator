@@ -42,15 +42,15 @@
 			<section class="input container clearfix">
 				<div class="people-number input-text clearfix">
 					<label for="group-people">No. People</label>
-					<input type="text" name="group-people" id="group-people" placeholder="0" />
+					<input type="text" pattern="[0-9]*" name="group-people" id="group-people" placeholder="1" value="1" />
 				</div>
 				<div class="subtotal input-text clearfix">
 					<label for="individual-subtotal">Subtotal</label>
-					<input type="number" name="individual-subtotal" id="individual-subtotal" placeholder="$0" />
+					<input type="text" pattern="[0-9]*" name="individual-subtotal" id="individual-subtotal" placeholder="$0" />
 				</div>
 				<div class="tax input-text clearfix">
 					<label for="individual-tax">Tax</label>
-					<input type="number" name="individual-tax" id="individual-tax" placeholder="$0" />
+					<input type="text" pattern="[0-9]*" name="individual-tax" id="individual-tax" placeholder="$0" />
 				</div>
 				<div class="tip clearfix">
 					<ul class="clearfix button-set">
@@ -83,10 +83,14 @@
 					<div class="output-label">Total</div>
 					<div class="result">$0</div>
 				</div>
+				<div class="total-individual clearfix">
+					<div class="output-label">Individual Total</div>
+					<div class="result">$0</div>
+				</div>
 			</section>
 		</div>
 
-		<script type="text/javascript" src="cordova-2.7.0.js"></script>
+		<!--<script type="text/javascript" src="cordova-2.7.0.js"></script>-->
 		<script type="text/javascript" charset="utf-8">
 
 		// Wait for Cordova to load
