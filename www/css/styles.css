@@ -226,6 +226,13 @@ input:focus {
 .tip li:last-child {
 	margin-right: 0;
 }
+.tip .twenty-percent {
+	letter-spacing: 0;
+}
+.tip li:hover,
+.tip li.on {
+    background-color: #00e89e;
+}
 .tip button {
     margin: 8px;
     border: none;
@@ -240,13 +247,6 @@ input:focus {
     cursor: pointer;
 	padding-left: 3px;
 	letter-spacing: -3px;
-}
-.tip .twenty-percent {
-	letter-spacing: 0;
-}
-.tip li.on {
-    background-color: #00e89e;
-/*	box-shadow: 0 2px 0 rgba(255, 255, 255, 1);*/
 }
 .tip li.on button {
     color: #00e39b;
